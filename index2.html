@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <script>
+      const body = document.querySelector("body");
+      const rain = () => {
+        const amount = 150;
+        for (let i = 0; i < amount; i++) {
+          let drop = document.createElement("i");
+          let posX = Math.floor(Math.random() * window.innerWidth);
+          let delay = Math.random() * -20;
+          let duration = Math.random() * 5;
+          let height = Math.random() * 200;
+          drop.style.left = `${posX}px`;
+          drop.style.width = `${Math.random() * 5 + 0.2}px`;
+          drop.style.animationDelay = `${delay}s`;
+          drop.style.animationDuration = `${1 + duration}s`;
+          drop.style.height = `${height + 50}px`;
+          body.appendChild(drop);
+        }
+      };
+
+      rain();
+    </script>
+  </body>
+</html>
